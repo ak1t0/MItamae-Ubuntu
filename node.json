@@ -1,0 +1,5 @@
+{
+    "user": "ak1t0",
+    "packages": ["emacs", "git", "zsh", "tmux", "curl", "binutils", "virtualbox-guest-dkms", "build-essential"],
+    "dir": "Works"
+}
