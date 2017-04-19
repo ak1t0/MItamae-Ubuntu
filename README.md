@@ -4,7 +4,7 @@
 - Ubuntu 17.04
 
 ## Install
-./mitamae local -j node.json recipe.rb`
+`./mitamae local -j node.json recipe.rb`
 
 ## Description
 
