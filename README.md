@@ -3,8 +3,8 @@
 ## Development
 - Ubuntu 17.04
 
-## Install
-`./mitamae local -j node.json recipe.rb`
+## One liner
+`wget https://github.com/ak1t0/MItamae-Ubuntu/archive/master.zip; unzip master.zip; rm master.zip; cd MItamae-Ubuntu-master; ./mitamae local -j node.json recipe.rb;`
 
 ## Description
 
