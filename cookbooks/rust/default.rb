@@ -1,13 +1,18 @@
 execute "Intsall rustup" do
   user node[:user]
-  command "$(curl https://sh.rustup.rs -sSf) -y | sh"
+  cwd "/tmp"
+  command <<-EOC
+  wget -O \"rustup.sh\" https://sh.rustup.rs
+  chmod +x ./rustup.sh
+  ./rustup.sh -y
+  EOC
 end
 
 execute "Set PATH" do
   user node[:user]
   command <<-EOC
     echo '# Rust' >> /home/#{node[:user]}/.profile
-    echo 'export PATH="$HOME/.cargo/bin:$PATH\"\n' >> /home/#{node[:user]}/.profile
+    echo 'source $HOME/.cargo/env' >> /home/#{node[:user]}/.profile
   EOC
 end
 
