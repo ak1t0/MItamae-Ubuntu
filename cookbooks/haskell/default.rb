@@ -1,6 +1,6 @@
-package "haskell-stack" do
-  user "root"
-  action :install
+execute "Install stack" do
+  user node[:user]
+  command "wget -qO- https://get.haskellstack.org/ | sh"
 end
 
 execute "Upgrade stack" do
@@ -9,4 +9,5 @@ end
 
 execute "Install GHC" do
   command "stack setup"
-end  
+end
+
