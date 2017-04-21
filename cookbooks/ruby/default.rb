@@ -1,3 +1,12 @@
+rb_packages = ["libssl-dev", "libreadline-dev"]
+
+rb_packages.each do |p| 
+  package p do
+    user "root"
+    action :install
+  end
+end
+
 git "/home/#{node[:user]}/.rbenv" do
   repository "git://github.com/rbenv/rbenv.git"
 end
