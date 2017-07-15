@@ -1,5 +1,5 @@
 {
     "user": "ak1t0",
-    "packages": ["emacs", "git", "zsh", "tmux", "curl", "binutils", "virtualbox-guest-dkms", "build-essential", "gconf2", "xclip"],
+    "packages": ["emacs", "git", "zsh", "tmux", "curl", "binutils", "virtualbox-guest-dkms", "build-essential", "gconf2", "xclip", "openjdk-8-jdk"],
     "dir": "Works"
 }
