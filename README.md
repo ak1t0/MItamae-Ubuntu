@@ -20,8 +20,11 @@ stack, ghc
 ### Ruby
 rbenv, ruby-build
 
+### Java
+openjdk-8-jdk
+
 ### packages
-emacs, git, zsh, tmux, curl, binutils, virtualbox-guest-dkms, build-essential
+emacs, git, zsh, tmux, curl, binutils, virtualbox-guest-dkms, build-essential, gconf2, xclip, pkg-config
 
 ### dotfiles
 [github.com/ak1t0/dotfiles](https://github.com/ak1t0/dotfiles)  
