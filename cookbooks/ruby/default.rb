@@ -27,10 +27,10 @@ end
 
 execute "Install Ruby" do
   user node[:user]
-  command "export PATH=$PATH:$HOME/.rbenv/bin; rbenv install 2.4.1"
+  command "export PATH=$PATH:$HOME/.rbenv/bin; rbenv install #{node[:versions][:ruby]}"
 end
 
 execute "Set Ruby" do
   user node[:user]
-  command "export PATH=$PATH:$HOME/.rbenv/bin; rbenv global 2.4.1"
+  command "export PATH=$PATH:$HOME/.rbenv/bin; rbenv global #{node[:versions][:ruby]}"
 end

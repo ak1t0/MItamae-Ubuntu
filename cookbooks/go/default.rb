@@ -1,13 +1,13 @@
 execute "Download Go" do
   user node[:user]
   cwd "/tmp"
-  command "wget https://storage.googleapis.com/golang/go1.8.1.linux-amd64.tar.gz"
+  command "wget https://storage.googleapis.com/golang/go#{node[:versions][:go]}.linux-amd64.tar.gz"
 end
 
 execute "Decompress" do
   user node[:user]
   cwd "/tmp"
-  command "tar xvf go1.8.1.linux-amd64.tar.gz"
+  command "tar xvf go#{node[:versions][:go]}.linux-amd64.tar.gz"
 end
 
 execute "Install Go" do
