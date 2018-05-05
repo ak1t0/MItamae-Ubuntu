@@ -1,6 +1,6 @@
 {
     "user": "ak1t0",
-    "packages": ["emacs", "git", "zsh", "tmux", "curl", "binutils", "virtualbox-guest-dkms", "build-essential", "gconf2", "xclip", "openjdk-8-jdk", "pkg-config", "libssl-dev", "cmake", "exuberant-ctags"],
+    "packages": ["emacs", "git", "zsh", "tmux", "curl", "binutils", "virtualbox-guest-dkms", "build-essential", "gconf2", "xclip", "openjdk-8-jdk", "pkg-config", "libssl-dev", "cmake", "exuberant-ctags", "texinfo", "fonts-powerline"],
     "versions": {"go": "1.10.1", "ruby": "2.5.1"},
     "dir": "Works"
 }
