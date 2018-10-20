@@ -13,6 +13,7 @@ execute "Set PATH" do
   command <<-EOC
     echo '# Rust' >> /home/#{node[:user]}/.profile
     echo 'source $HOME/.cargo/env' >> /home/#{node[:user]}/.profile
+    echo 'export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"' >> /home/#{{ node[:user]}/.profile] }}
   EOC
 end
 
