@@ -22,32 +22,32 @@ execute "Set PATH" do
   command <<-EOC
     echo '# Go' >> /home/#{node[:user]}/.profile
     echo 'export PATH=$PATH:/usr/local/go/bin' >> /home/#{node[:user]}/.profile
-    echo 'export GOPATH=$HOME/go' >> /home/#{node[:user]}/.profile
+    echo 'export GOPATH=$HOME' >> /home/#{node[:user]}/.profile
     echo 'export PATH=$PATH:$GOPATH/bin\n' >> /home/#{node[:user]}/.profile
   EOC
 end
 
 execute "Install godef" do
   user node[:user]
-  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME/go; go get -u github.com/rogpeppe/godef"
+  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/rogpeppe/godef"
 end
 
 execute "Install lint" do
   user node[:user]
-  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME/go; go get -u github.com/golang/lint"
+  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/golang/lint"
 end
 
 execute "Install gocode" do
   user node[:user]
-  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME/go; go get -u github.com/nsf/gocode"
+  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/nsf/gocode"
 end
 
 execute "Install peco" do
   user node[:user]
-  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME/go; go get -u github.com/peco/peco/cmd/peco"
+  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/peco/peco/cmd/peco"
 end
 
 execute "Install hub" do
   user node[:user]
-  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME/go; go get -u github.com/github/hub"
+  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/github/hub"
 end
