@@ -32,14 +32,9 @@ execute "Install godef" do
   command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/rogpeppe/godef"
 end
 
-execute "Install lint" do
-  user node[:user]
-  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/golang/lint"
-end
-
 execute "Install gocode" do
   user node[:user]
-  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/nsf/gocode"
+  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/mdempsky/gocode"
 end
 
 execute "Install peco" do
@@ -50,4 +45,9 @@ end
 execute "Install hub" do
   user node[:user]
   command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/github/hub"
+end
+
+execute "Install golangci-lint" do
+  user node[:user]
+  command "export PATH=$PATH:/usr/local/go/bin; export GOPATH=$HOME; go get -u github.com/golangci/golangci-lint/cmd/golangci-lint"
 end
