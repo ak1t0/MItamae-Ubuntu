@@ -32,8 +32,29 @@ execute "Intsall cargo-update" do
   command "export PATH=\"$HOME/.cargo/bin:$PATH\"; cargo install cargo-update --force"
 end
 
-execute "Install ripgrep"do
+execute "Install ripgrep" do
   user node[:user]
   command "export PATH=\"$HOME/.cargo/bin:$PATH\"; cargo install ripgrep --force"
-end  
+end
+
+execute "Install exa" do
+  user node[:user]
+  command "export PATH=\"$HOME/.cargo/bin:$PATH\"; cargo install exa --force"
+end
+
+execute "Install bat" do
+  user node[:user]
+  command "export PATH=\"$HOME/.cargo/bin:$PATH\"; cargo install bat --force"
+end
+
+execute "Install fd" do
+  user node[:user]
+  command "export PATH=\"$HOME/.cargo/bin:$PATH\"; cargo install fd-find --force"
+end
+
+
+
+
+
+
   
